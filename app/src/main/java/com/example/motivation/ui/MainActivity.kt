@@ -1,4 +1,4 @@
-package com.example.motivation
+package com.example.motivation.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -12,5 +12,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar!!.hide()
     }
 }
