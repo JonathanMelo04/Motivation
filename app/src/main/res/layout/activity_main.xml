@@ -65,6 +65,8 @@
         android:text="Frase"
         android:textColor="@color/colorPrimary"
         android:textSize="24sp"
+        android:layout_margin="16dp"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -81,15 +83,18 @@
 
     <Button
         android:id="@+id/buttonNewPhrase"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/nova_frase"
         android:textColor="@color/white"
+        android:textSize="16sp"
         android:padding="16dp"
+        android:layout_margin="20dp"
         android:layout_marginBottom="16dp"
+        android:background="@drawable/ripple_buttom_phrase"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:backgroundTint="@color/colorPrimary"/>
+        app:layout_constraintStart_toStartOf="parent"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Dados/Documents/ASProjects/Motivation/app/src/main/res/drawable/button_background_new_phrase.xml" value="0.2203125" />
+        <entry key="..\:/Dados/Documents/ASProjects/Motivation/app/src/main/res/drawable/button_background_save.xml" value="0.2203125" />
+        <entry key="..\:/Dados/Documents/ASProjects/Motivation/app/src/main/res/drawable/customer_button.xml" value="0.2203125" />
+        <entry key="..\:/Dados/Documents/ASProjects/Motivation/app/src/main/res/drawable/ripple_buttom.xml" value="0.2203125" />
+        <entry key="..\:/Dados/Documents/ASProjects/Motivation/app/src/main/res/drawable/ripple_buttom_save.xml" value="0.2203125" />
         <entry key="..\:/Dados/Documents/ASProjects/Motivation/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Dados/Documents/ASProjects/Motivation/app/src/main/res/layout/activity_splash.xml" value="0.22" />
       </map>
