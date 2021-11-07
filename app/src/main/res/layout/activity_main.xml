@@ -67,4 +67,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <View
+        android:layout_width="130dp"
+        android:layout_height="3dp"
+        android:background="@color/colorPrimaryVariant"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textPhrase" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
