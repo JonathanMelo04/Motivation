@@ -7,7 +7,7 @@
     tools:context=".ui.MainActivity">
 
     <LinearLayout
-        android:id="@+id/layoutToolbar"
+        android:id="@+id/linearMenu"
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
         android:background="@color/colorPrimary"
@@ -48,11 +48,12 @@
         android:layout_height="wrap_content"
         android:text="Nome"
         android:textColor="@color/colorPrimary"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layoutToolbar" />
+        app:layout_constraintTop_toBottomOf="@+id/linearMenu" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
