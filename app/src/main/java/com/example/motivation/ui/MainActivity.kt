@@ -6,11 +6,13 @@ import com.example.motivation.R
 import com.example.motivation.databinding.ActivityMainBinding
 import com.example.motivation.infra.MotivationConstants
 import com.example.motivation.infra.SecurityPreferences
+import com.example.motivation.repository.Mock
 
 class MainActivity : AppCompatActivity(){
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var mSecurityPreferences: SecurityPreferences
+    private var mPhraseFilter: Int = MotivationConstants.PHRASEFILTER.ALL
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,6 +23,9 @@ class MainActivity : AppCompatActivity(){
         mSecurityPreferences = SecurityPreferences(this)
         binding.textName.text = mSecurityPreferences.getString(MotivationConstants.KEY.PERSON_NAME)
 
+        binding.imageAll.setColorFilter(resources.getColor(R.color.colorPrimaryVariant))
+        handleNewPhrase()
+
         binding.buttonNewPhrase.setOnClickListener {
             handleNewPhrase()
         }
@@ -29,22 +34,25 @@ class MainActivity : AppCompatActivity(){
             binding.imageAll.setColorFilter(resources.getColor(R.color.colorPrimaryVariant))
             binding.imageHappy.setColorFilter(resources.getColor(R.color.white))
             binding.imageMorning.setColorFilter(resources.getColor(R.color.white))
+            mPhraseFilter = MotivationConstants.PHRASEFILTER.ALL
         }
 
         binding.imageHappy.setOnClickListener {
             binding.imageHappy.setColorFilter(resources.getColor(R.color.colorPrimaryVariant))
             binding.imageAll.setColorFilter(resources.getColor(R.color.white))
             binding.imageMorning.setColorFilter(resources.getColor(R.color.white))
+            mPhraseFilter = MotivationConstants.PHRASEFILTER.HAPPY
         }
 
         binding.imageMorning.setOnClickListener {
             binding.imageMorning.setColorFilter(resources.getColor(R.color.colorPrimaryVariant))
             binding.imageAll.setColorFilter(resources.getColor(R.color.white))
             binding.imageHappy.setColorFilter(resources.getColor(R.color.white))
+            mPhraseFilter = MotivationConstants.PHRASEFILTER.MORNING
         }
     }
 
     private fun handleNewPhrase() {
-
+        binding.textPhrase.text = Mock().getPhrase(mPhraseFilter)
     }
 }
