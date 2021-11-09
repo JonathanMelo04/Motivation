@@ -24,6 +24,8 @@ class SplashActivity : AppCompatActivity() {
         binding.buttonSave.setOnClickListener {
             handleSave()
         }
+
+        verifyName()
     }
 
     private fun handleSave() {
@@ -35,6 +37,14 @@ class SplashActivity : AppCompatActivity() {
             startActivity(Intent(this, MainActivity::class.java))
         }else{
             Toast.makeText(this,"Informe o seu nome!",Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun verifyName() {
+        val name = mSecurityPreferences.getString(MotivationConstants.KEY.PERSON_NAME)
+        if (name != "") {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
     }
 }
