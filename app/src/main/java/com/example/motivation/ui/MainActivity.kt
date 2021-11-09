@@ -1,5 +1,6 @@
 package com.example.motivation.ui
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.motivation.R
@@ -21,7 +22,8 @@ class MainActivity : AppCompatActivity(){
         supportActionBar!!.hide()
 
         mSecurityPreferences = SecurityPreferences(this)
-        binding.textName.text = mSecurityPreferences.getString(MotivationConstants.KEY.PERSON_NAME)
+        val name = mSecurityPreferences.getString(MotivationConstants.KEY.PERSON_NAME)
+        binding.textName.text = "Olá, $name!"
 
         binding.imageAll.setColorFilter(resources.getColor(R.color.colorPrimaryVariant))
         handleNewPhrase()
